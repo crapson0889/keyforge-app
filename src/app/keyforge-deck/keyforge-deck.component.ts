@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { KeyforgeAnalyzerService } from '../keyforge-analyzer.service';
-import { CardData } from '../models/card-data';
-import { ResourceLoader } from '@angular/compiler';
+import { DeckData } from '../models/deck-data';
+// import { ResourceLoader } from '@angular/compiler';
 
 @Component({
   selector: 'app-keyforge-deck',
@@ -10,7 +10,7 @@ import { ResourceLoader } from '@angular/compiler';
 })
 export class KeyforgeDeckComponent implements OnInit {
 
-  @Input() cardData: CardData = { CreatureCount: 1 };
+  @Input() deckData: DeckData = new DeckData; //  = { creatureCount: 1 };
 
   constructor(private keyforgeAnalyzerService: KeyforgeAnalyzerService) { }
 
@@ -27,7 +27,8 @@ export class KeyforgeDeckComponent implements OnInit {
   }
 
   logTest(response): void {
-    this.cardData = response;
+    this.deckData = response;
     console.log(response);
+    console.log(this.deckData);
   }
 }

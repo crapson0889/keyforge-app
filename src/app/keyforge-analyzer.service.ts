@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CardData } from './models/card-data';
+import { DeckData } from './models/deck-data';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 
@@ -20,7 +20,7 @@ export class KeyforgeAnalyzerService {
 
   constructor(private http: HttpClient) { }
 
-  getCardData(): Observable<CardData>  {
-    return this.http.get<CardData>(this.keyforgeUrl, options);
+  getCardData(): Observable<DeckData>  {
+    return this.http.get<DeckData>(this.keyforgeUrl, options);
   }
 }

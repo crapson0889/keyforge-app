@@ -3,5 +3,9 @@
 </p>
 
 <p>
-  {{cardData.CreatureCount}}
+  {{ deckData.CreatureCount }}
 </p>
+
+<ul *ngFor="let card of deckData.Cards">
+  <li>{{ card.name }}</li>
+</ul>

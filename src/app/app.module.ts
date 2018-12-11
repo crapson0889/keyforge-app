@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { KeyforgeDeckComponent } from './keyforge-deck/keyforge-deck.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    KeyforgeDeckComponent
+    KeyforgeDeckComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
