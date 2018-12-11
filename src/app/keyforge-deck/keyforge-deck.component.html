@@ -1,11 +1,24 @@
-<p>
-  keyforge-deck works! 
-</p>
+<div *ngIf="deckData" class="container">
+  <!--Name and Details-->
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>{{deckData.Deck.name}}</h2>
+    </div>
+  </div>
 
-<p>
-  {{ deckData.CreatureCount }}
-</p>
+  <div class="row">
+    <div class="col-sm-4">
+      Creature Count: {{deckData.CreatureCount}}
+    </div>
+    <div class="col-sm-4">
+      Amber Count: {{deckData.AmberCount}}
+    </div>
+  </div>
 
-<ul *ngFor="let card of deckData.Cards">
-  <li>{{ card.name }}</li>
-</ul>
+  <!--Card Data-->
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let card of deckData.Deck.cards.AllCards">
+      <app-card [card]=card></app-card>
+    </div>
+  </div>
+</div>

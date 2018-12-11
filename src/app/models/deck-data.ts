@@ -1,7 +1,9 @@
-import { Card } from './card';
+import { Deck } from './deck';
 
 export class DeckData {
-    public CreatureCount: number;
+    deck: Deck;
 
-    public Cards: Card[];
+    creatureCount: number;
+
+    amberCount: number;
 }

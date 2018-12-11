@@ -10,7 +10,9 @@ import { DeckData } from '../models/deck-data';
 })
 export class KeyforgeDeckComponent implements OnInit {
 
-  @Input() deckData: DeckData = new DeckData; //  = { creatureCount: 1 };
+  @Input() deckData: DeckData; //  = { creatureCount: 1 };
+
+  @Input() hasData: boolean = false;
 
   constructor(private keyforgeAnalyzerService: KeyforgeAnalyzerService) { }
 
@@ -29,6 +31,6 @@ export class KeyforgeDeckComponent implements OnInit {
   logTest(response): void {
     this.deckData = response;
     console.log(response);
-    console.log(this.deckData);
+    this.hasData = true;
   }
 }
