@@ -1,3 +1,13 @@
+.k-deck{
+    background: rgba(201, 193, 173, 0.61);
+
+    margin-bottom: 10px;
+}
+
+.k-deck .row:first-of-type {
+    background: grey;
+}
+
 .k-deck-name{
     cursor: pointer;
 }

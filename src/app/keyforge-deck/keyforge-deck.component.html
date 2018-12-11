@@ -1,17 +1,52 @@
-<div *ngIf="deckData" class="container">
+<div *ngIf="deckData" class="container k-deck">
   <!--Name and Details-->
   <div class="row">
     <div class="col-sm-12">
-      <h2 class="k-deck-name"><a (click)="nameClick()">{{deckData.Deck.name}}</a></h2>
+      <h2 class="k-deck-name">
+        <a (click)="nameClick()">{{deckData.Deck.name}}</a>
+      </h2>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       Creature Count: {{deckData.CreatureCount}}
     </div>
-    <div class="col-sm-4">
-      Amber Count: {{deckData.AmberCount}}
+    <div class="col-sm-3">
+      Action Count: {{deckData.ActionCount}}
+    </div>
+    <div class="col-sm-3">
+      Artifact Count: {{deckData.ArtifactCount}}
+    </div>
+    <div class="col-sm-3">
+      Upgrade Count: {{deckData.UpgradeCount}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-3">
+      Damage: {{deckData.DirectDamageCount}}
+    </div>
+    <div class="col-sm-3">
+      Amber: {{deckData.AmberCardCount}}
+    </div>
+    <div class="col-sm-3">
+      Draw: {{deckData.DrawCount}}
+    </div>
+    <div class="col-sm-3">
+      Discard: {{deckData.DiscardCount}}
+    </div>
+    <div class="col-sm-3">
+      Ready: {{deckData.ReadyCount}}
+    </div>
+    <div class="col-sm-3">
+      Forge: {{deckData.ForgeCount}}
+    </div>
+    <div class="col-sm-3">
+      Capture: {{deckData.CaptureCount}}
+    </div>
+    <div class="col-sm-3">
+      Return: {{deckData.ReturnCount}}
     </div>
   </div>
 
@@ -22,3 +57,4 @@
     </div>
   </div>
 </div>
+

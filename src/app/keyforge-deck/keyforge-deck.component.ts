@@ -21,6 +21,7 @@ export class KeyforgeDeckComponent implements OnInit {
   constructor(private keyforgeAnalyzerService: KeyforgeAnalyzerService) { }
 
   ngOnInit() {
+    console.log("loading: " + this.id);
     this.getDeck();
   }
 
