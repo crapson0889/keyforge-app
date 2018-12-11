@@ -16,7 +16,7 @@ const options = {
 })
 export class KeyforgeAnalyzerService {
 
-  private keyforgeUrl = 'https://localhost:5001/api/card/';
+  private keyforgeUrl = 'http://localhost:5001/api/card/';
 
   constructor(private http: HttpClient) { }
 
