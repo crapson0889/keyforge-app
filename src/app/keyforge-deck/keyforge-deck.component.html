@@ -2,7 +2,7 @@
   <!--Name and Details-->
   <div class="row">
     <div class="col-sm-12">
-      <h2>{{deckData.Deck.name}}</h2>
+      <h2 class="k-deck-name"><a (click)="nameClick()">{{deckData.Deck.name}}</a></h2>
     </div>
   </div>
 
@@ -16,7 +16,7 @@
   </div>
 
   <!--Card Data-->
-  <div class="row">
+  <div *ngIf="showCards" class="row">
     <div class="col-sm-4" *ngFor="let card of deckData.Deck.cards.AllCards">
       <app-card [card]=card></app-card>
     </div>

@@ -10,9 +10,13 @@ import { DeckData } from '../models/deck-data';
 })
 export class KeyforgeDeckComponent implements OnInit {
 
-  @Input() deckData: DeckData; //  = { creatureCount: 1 };
+  @Input() id: string;
+
+  @Input() deckData: DeckData;
 
   @Input() hasData: boolean = false;
+
+  @Input() showCards: boolean = false;
 
   constructor(private keyforgeAnalyzerService: KeyforgeAnalyzerService) { }
 
@@ -21,16 +25,17 @@ export class KeyforgeDeckComponent implements OnInit {
   }
 
   getDeck(): void {
-    // const id = +this.route.snapshot.paramMap.get('id');
-    // this.heroService.getHero(id)
-    //   .subscribe(hero => this.hero = hero);
-    this.keyforgeAnalyzerService.getCardData()
-      .subscribe(result => this.logTest(result)); // this.cardData = result); // console.log(result));
+    this.keyforgeAnalyzerService.getCardData(this.id)
+      .subscribe(result => this.logTest(result));
   }
 
   logTest(response): void {
     this.deckData = response;
     console.log(response);
     this.hasData = true;
+  }
+
+  nameClick(): void{
+    this.showCards = !this.showCards;
   }
 }

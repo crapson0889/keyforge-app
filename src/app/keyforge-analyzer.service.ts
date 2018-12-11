@@ -20,7 +20,7 @@ export class KeyforgeAnalyzerService {
 
   constructor(private http: HttpClient) { }
 
-  getCardData(): Observable<DeckData>  {
-    return this.http.get<DeckData>(this.keyforgeUrl, options);
+  getCardData(id: string): Observable<DeckData>  {
+    return this.http.get<DeckData>(this.keyforgeUrl + "?id=" + id, options);
   }
 }

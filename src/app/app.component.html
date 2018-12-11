@@ -5,6 +5,6 @@
   </h1>
 </div>
 
-<app-keyforge-deck></app-keyforge-deck>
+<app-keyforge-deck *ngFor="let deck of decks" id="{{deck}}"></app-keyforge-deck>
 
 <router-outlet></router-outlet>
